@@ -13,9 +13,10 @@ body {
     padding: 50px 5%;
 }
 
-.container {
+
+body > .container {
     position: relative;
-    height: 100%;
+    height: 10%;
     background-color: rgba(58, 58, 58, 75%);
     border-radius: 30px;
 }
@@ -54,84 +55,156 @@ header {
     border-color: white;
 }
 
-.home {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    gap: 50px;
-    padding: 50px 5% 0;
-    color: white;
-}
-
-div.home-detail > h1 {
-    font-size: 3rem;
-    line-height: 1;
-}
-
-div.home-detail > h2 {
-    padding-top: 6px;
-    font-size: 1.5rem;
-}
-
-.home-detail > div.social {
-    display: flex;
-    align-items: center;
-    padding-top: 20px;
-}
-
-.download-resume {
-    display: inline-block;
-    padding: 10px 30px;
-    background: #fff;
-    border: 2px solid #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 10px #fff;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: .5s;
-}
-
-.download-resume:hover {
-    background: transparent;
-    box-shadow: none;
-    color: white;
-}
-
-.home-detail .social-icons {
-    margin-left: 20px;
-}
-
-.home-detail .social-icons a {
-    display: inline-flex;
-    padding: 8px;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-    margin: 0 8px;
-    transition: .5s;
-}
-
-.home-detail .social-icons a:hover {
-    background: white;
-    box-shadow: 0 0 10px white;
-    color: #333;
-}
-
-.home-img .img-box {
+body > .contact {
     position: relative;
-    width: 28vw;
-    height: 28vw;
-    border: 2px solid white;
-    border-radius: 50%;
-    box-shadow: 0 0 20px white;
+    height: 88%;
+    background-color: rgba(58, 58, 58, 75%);
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.home-img .img-box img {
-    position: absolute;
-    display: block;
+.contact .container {
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contact .container > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.left {
     width: 100%;
-    object-fit: cover;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: pink;
+    padding: 65px 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+/* 
+    position: relative;
+    height: 88%;
+    background-color: rgba(58, 58, 58, 75%);
+    border-radius: 30px;
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden; */
+}
+
+.contact-heading h1 {
+    font-weight: 600;
+    color: white;
+    font-size: 3.5rem;
+    line-height: 0.9;
+    white-space: nowrap;
+    margin-bottom: 1.2rem;
+}
+
+.contact-heading h1 span {
+    color: red;
+}
+
+.text {
+    color: grey;
+    line-height: 1.1;
+    font-size: 1rem;
+}
+
+.text a {
+    color: white;
+    transition: 0.3s;
+}
+
+.text a:hover {
+    color: black;
+}
+
+.form-wrapper {
+    max-width: 32rem;
+}
+
+.contact-form {
+    display: grid;
+    margin-top: 2.55rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-wrap.w-100 {
+    grid-column: span 2;
+}
+
+.contact-input {
+    width:100%;
+    background-color: powderblue;
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border:none;
+    outline: none;
+    font-family: inherit;
+    border-radius: 20px;
+    color: black;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 0px hsla(grey);
+    transition: .3s;
+}
+
+.contact-input:hover {
+    background-color: red;
+}
+
+.input-wrap label {
+    position: absolute;
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: green;
+    pointer-events: none;
+}
+
+.input-wrap .icon {
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: brown;
+    font-size: 1.25rem;
+
+}
+
+textarea.contact-input {
+    resize: none;
+    width: 100%;
+    min-height: 150px;
+}
+
+textarea.contact-input ~ label {
+    top: 1.2rem;
+    transform: none;
+}
+
+textarea.contact-input ~ .icon {
+    top: 1.3rem;
+    transform: none;
+}
+
+.input-wrap.focus .contact-input {
+    background-color: purple;
+    border: 2px solid hsl(blue);
+    box-shadow: 0 0 0 5px hsla(blue);
 }

@@ -3,48 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yana Jakhwal</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="../css/contact.css">
     <!-- <link rel="stylesheet" href="./css/remixicon.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"/>
+    <script src="app.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <a href="home.html" class="logo">Portfolio.</a>
             <nav class="navbar">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="projects.html">Projects</a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" class="active">Contact</a>
             </nav>
         </header>
-        
-        <section class="home">
-            <div class="home-detail">
-                <h1>Yana Jakhwal</h1>
-                <h2>Developer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur 
-                    adipisicing elit. Obcaecati, magnam! 
-                    Aliquid quis voluptas, quod maiores aperiam,
-                    accusantium dicta a officiis optio maxime quae?
-                </p>
-                <div class="social">
-                    <a href="" class="download-resume">Download Resume</a>
-                    <div class="social-icons">
-                        <a href="https://github.com/yanajakhwal"><i class="ri-github-fill"></i></a>
-                        <a href="https://linkedin.com/in/yanajakhwal"><i class="ri-linkedin-box-fill"></i></a>
+    </div>
+    <main>    
+        <section class="contact"> 
+            <div class="container">
+                <div class="left">
+                    <div class="form-wrapper">
+                        <div class="contact-heading">
+                            <h1>Let's Work Torgether<span>.</span></h1>
+                            <p class="text">Or reach us via : <a href="mailto:yjakhwal@uwaterloo.ca">yjakhwal@uwaterloo.ca</a></p>
+                        </div>
+                        <form action="contact.html" method="post" class="contact-form">
+                            <div class="input-wrap">
+                                <input class="contact-input" autocomplete="off" name="First Name" type="text" required>
+                                <label>First Name</label>
+                                <i class="icon ri-id-card-fill"></i>
+                            </div>
+                            <div class="input-wrap">
+                                <input class="contact-input" autocomplete="off" name="Last Name" type="text" required>
+                                <label>Last Name</label>
+                                <i class="icon ri-id-card-fill"></i>
+                            </div>
+                            <div class="input-wrap">
+                                <input class="contact-input email" autocomplete="off" name="Email" type="email" required>
+                                <label>Email</label>
+                                <i class="icon ri-mail-fill"></i>
+                            </div>
+                            <div class="input-wrap textare w-100">
+                                <textarea name="Message" autocomplete="off" class="contact-input" required></textarea>
+                                <label>Message</label>
+                                <i class="icon ri-inbox-fill"></i>                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
-            <div class="home-img">
-                <div class="img-box">
-                    <img src="../images/profile-pic.png" alt="self-pic" >
+                    
+                <div class="right">
+
                 </div>
             </div>
-                
-
-        </section>
+    `    </section>
+    </main>
 </body>
 </html>
