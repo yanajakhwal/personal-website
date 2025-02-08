@@ -16,7 +16,7 @@ body {
 
 body > .container {
     position: relative;
-    height: 10%;
+    height: 12%;
     background-color: rgba(58, 58, 58, 75%);
     border-radius: 30px;
 }
@@ -53,36 +53,51 @@ header {
 
 .navbar a:hover, .navbar a.active {
     border-color: white;
-}
+}xs
 
 body > .contact {
     position: relative;
-    height: 88%;
-    background-color: rgba(58, 58, 58, 75%);
+    height: calc(100vh - 12% - 20px);
+    /* background-color: rgba(58, 58, 58, 75%); */
     border-radius: 30px;
     margin-top: 20px;
     width: 100%;
     overflow: hidden;
 }
-
+/* 
 .contact .container {
     height: 100vh;
     min-height: 700px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+} */
+.contact .container {
+    height: auto; /* Makes it fit content */
+    min-height: 400px; /* Set a shorter minimum height */
+    max-height: 700px; /* Prevents it from being too tall */
+    padding: 40px; /* Adds spacing */
+    margin-top: 20px;
 }
 
-.contact .container > div {
+body > main > section > div {
     grid-column: 1/2;
     grid-row: 1/2;
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(58, 58, 58, 75%);
+    border-radius: 30px;
 }
 
 .left {
     width: 100%;
     max-width: 80rem;
     margin: 0 auto;
-    background-color: pink;
+    /* background-color: pink; */
+    /* background-color: rgba(58, 58, 58, 75%); */
     padding: 65px 1.5rem 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -109,7 +124,7 @@ body > .contact {
 }
 
 .contact-heading h1 span {
-    color: red;
+    color: rgb(139, 139, 139);
 }
 
 .text {
@@ -128,6 +143,7 @@ body > .contact {
 }
 
 .form-wrapper {
+    /* padding-top: 10%; */
     max-width: 32rem;
 }
 
@@ -145,11 +161,12 @@ body > .contact {
 
 .input-wrap.w-100 {
     grid-column: span 2;
+    /* position: relative; */
 }
 
 .contact-input {
     width:100%;
-    background-color: powderblue;
+    background-color: rgb(235, 235, 235);
     padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
     border:none;
     outline: none;
@@ -164,7 +181,7 @@ body > .contact {
 }
 
 .contact-input:hover {
-    background-color: red;
+    background-color: rgb(206, 206, 206);
 }
 
 .input-wrap label {
@@ -172,7 +189,7 @@ body > .contact {
     top: 50%;
     left: calc(1.35rem + 2px);
     transform: translateY(-50%);
-    color: green;
+    color: rgb(102, 102, 102);
     pointer-events: none;
 }
 
@@ -182,7 +199,7 @@ body > .contact {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    color: brown;
+    color: rgb(53, 53, 53);
     font-size: 1.25rem;
 
 }
@@ -207,4 +224,8 @@ textarea.contact-input ~ .icon {
     background-color: purple;
     border: 2px solid hsl(blue);
     box-shadow: 0 0 0 5px hsla(blue);
+}
+
+body > main > section {
+    height: 80%
 }
